@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router";
 export default function MainHome() {
   const [dataMovies, setDataMovies] = useState([]);
 
@@ -20,7 +20,12 @@ export default function MainHome() {
         <div className="container">
           <ul>
             {dataMovies.map((movie) => {
-              return <li>{movie.title}</li>;
+              return (
+                <li key={movie.id}>
+                  {movie.title}
+                  <Link to={`/${movie.id}`}>Vai al film</Link>
+                </li>
+              );
             })}
           </ul>
         </div>
