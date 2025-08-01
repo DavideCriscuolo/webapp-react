@@ -17,13 +17,13 @@ export default function SingleMovie() {
   console.log(movie);
   return (
     <>
-      <div>
+      <main>
         <div>
           {movie.map((item) => {
             return <p>{item.text}</p>;
           })}
         </div>
-      </div>
+      </main>
     </>
   );
 }
