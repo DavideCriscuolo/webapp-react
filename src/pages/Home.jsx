@@ -1,3 +1,9 @@
+import MainHome from "../components/MainHome";
+
 export default function Home() {
-  return <h1 className="text-center">Ciao</h1>;
+  return (
+    <>
+      <MainHome></MainHome>
+    </>
+  );
 }

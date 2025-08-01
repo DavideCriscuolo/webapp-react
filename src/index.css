@@ -1,0 +1,14 @@
+header {
+  img {
+    height: 50px;
+  }
+}
+
+main {
+  min-height: 1200px;
+}
+
+footer {
+  height: 100px;
+  background-color: black;
+}
