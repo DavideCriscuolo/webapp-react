@@ -22,7 +22,7 @@ export default function CardC(props) {
                 <div
                   className={`hidden ${isVisible === movie.id ? "show" : ""}`}
                 >
-                  <h5 class="card-title text-center py-3 fw-bold">
+                  <h5 className="card-title text-center py-3 fw-bold">
                     {" "}
                     {movie.title}
                   </h5>

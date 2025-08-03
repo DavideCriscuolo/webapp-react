@@ -1,4 +1,4 @@
-import { use, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import JumboC from "../components/JumboC";
 import StarRatings from "react-star-ratings";
