@@ -4,19 +4,14 @@ import JumboC from "../components/JumboC";
 import StarRatings from "react-star-ratings";
 export default function SingleMovie() {
   const { id } = useParams();
-  const [reviews, setReviews] = useState([]);
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState({ reviews: [] });
   const urlReview = `http://localhost:3004/movies/movie/${id}`;
-  const urlData = `http://localhost:3004/movies/${id}`;
+
   function gnrData() {
     fetch(urlReview)
       .then((res) => res.json())
       .then((data) => {
-        setReviews(data);
-      });
-    fetch(urlData)
-      .then((res) => res.json())
-      .then((data) => {
+        console.log(data);
         setMovie(data);
       });
   }
@@ -34,7 +29,7 @@ export default function SingleMovie() {
                   <div className="col-md-4">
                     <img
                       src={`http://localhost:3004/${movie.image}`}
-                      className="img-fluid rounded-start h-100"
+                      className="img-fluid rounded-start  h-100"
                       alt="..."
                     />
                   </div>
@@ -62,31 +57,31 @@ export default function SingleMovie() {
                       <div className="my-5">
                         {" "}
                         <h3 className="card-text">Recensioni</h3>
-                        <div>
-                          {reviews.map((review) => {
-                            return (
-                              <div
-                                key={review.id}
-                                className=" border-bottom border-grey py-3 "
-                              >
-                                <div className="d-flex align-items-end gap-2">
-                                  <h6 className="fw-bold my-0  ">
-                                    {" "}
-                                    {review.name}{" "}
-                                  </h6>
-                                  <StarRatings
-                                    rating={review.vote}
-                                    starRatedColor="gold"
-                                    numberOfStars={5}
-                                    starDimension="25px"
-                                    starSpacing="2px"
-                                  ></StarRatings>
-                                </div>
-                                <p>{review.text}</p>
+                      </div>
+                      <div>
+                        {movie.reviews.map((review) => {
+                          return (
+                            <div
+                              key={review.id}
+                              className=" border-bottom border-grey py-3 "
+                            >
+                              <div className="d-flex align-items-end gap-2">
+                                <h6 className="fw-bold my-0  ">
+                                  {" "}
+                                  {review.name}{" "}
+                                </h6>
+                                <StarRatings
+                                  rating={review.vote}
+                                  starRatedColor="gold"
+                                  numberOfStars={5}
+                                  starDimension="25px"
+                                  starSpacing="2px"
+                                ></StarRatings>
                               </div>
-                            );
-                          })}
-                        </div>
+                              <p>{review.text}</p>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
