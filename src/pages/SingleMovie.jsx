@@ -65,7 +65,10 @@ export default function SingleMovie() {
                         <div>
                           {reviews.map((review) => {
                             return (
-                              <div className=" border-bottom border-grey py-3 ">
+                              <div
+                                key={review.id}
+                                className=" border-bottom border-grey py-3 "
+                              >
                                 <div className="d-flex align-items-end gap-2">
                                   <h6 className="fw-bold my-0  ">
                                     {" "}
