@@ -26,14 +26,14 @@ export default function SingleMovie() {
             <div className="col">
               <div className="card mb-3">
                 <div className="row g-0">
-                  <div className="col-md-4">
+                  <div className="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-center  align-items-center p-2">
                     <img
                       src={`http://localhost:3004/${movie.image}`}
-                      className="img-fluid rounded-start  h-100"
+                      className="img-fluid  w-100"
                       alt="..."
                     />
                   </div>
-                  <div className="col-md-8">
+                  <div className=" col-sm-12 col-md-12 col-lg-8">
                     <div className="card-body">
                       <h2 className="card-title">{movie.title}</h2>
                       <div>
