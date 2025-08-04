@@ -3,9 +3,32 @@ header {
     height: 50px;
   }
 }
+nav {
+  background-color: #c1121f;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: #003049;
+  }
+}
+
+.jumbo {
+  height: 600px;
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+  }
+}
+.bg-img-jumbo {
+  background-image: url("./sala-cinema.jpg");
+  background-size: cover;
+  background-position: 50% 45%;
+}
 
 main {
   min-height: 1200px;
+  background-color: #003049;
 }
 .hidden {
   opacity: 0;
@@ -19,5 +42,5 @@ main {
 
 footer {
   height: 100px;
-  background-color: black;
+  background-color: #c1121f;
 }

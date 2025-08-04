@@ -11,7 +11,7 @@ export default function CardC(props) {
             <div className="card h-100 text-bg-dark">
               <img
                 src={` http://localhost:3004/${movie.image}`}
-                className="card-img"
+                className="card-img h-100"
                 alt="Image Film"
               />
               <div

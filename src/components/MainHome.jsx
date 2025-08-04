@@ -16,8 +16,9 @@ export default function MainHome() {
   return (
     <>
       <main>
-        <div className="container">
-          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2  row-cols-lg-4  g-3">
+        <div className="container py-5">
+          <h2 className="text-center text-white py-3">TUTTI I FILM</h2>
+          <div className=" py-2 row row-cols-1 row-cols-sm-1 row-cols-md-2  row-cols-lg-4  g-3">
             <CardC data={dataMovies}></CardC>
           </div>
         </div>

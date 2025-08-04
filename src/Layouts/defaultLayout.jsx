@@ -3,13 +3,10 @@ export default function defaultLayout() {
   return (
     <>
       <header>
-        <nav className="navbar bg-body-tertiary">
+        <nav className="navbar ">
           <div className="container">
             <NavLink className="navbar-brand" to={"/"}>
-              <img
-                src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-                alt="Bootstrap"
-              />
+              <h1>CineFlix</h1>
             </NavLink>
           </div>
         </nav>
