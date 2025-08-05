@@ -29,7 +29,7 @@ export default function CardC(props) {
                   <div className="d-flex justify-content-center align-items-center">
                     <Link
                       className="btn btn-outline-danger border-3 fw-bold mx-2"
-                      to={`/${movie.id}`}
+                      to={`/movie/${movie.id}`}
                     >
                       Vai al film
                     </Link>
