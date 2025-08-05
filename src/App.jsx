@@ -8,7 +8,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={defaultLayout}>
-            <Route path="/movies" element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/movie/:id" element={<SingleMovie />}></Route>
             <Route path="/movies/*" element={<h1>404</h1>}></Route>
           </Route>
