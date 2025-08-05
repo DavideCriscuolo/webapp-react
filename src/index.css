@@ -21,14 +21,13 @@ nav {
   }
 }
 .bg-img-jumbo {
-  background-image: url("./sala-cinema.jpg");
+  background-image: url("./assets/sala-cinema.jpg");
   background-size: cover;
   background-position: 50% 45%;
 }
 
 main {
   min-height: 1200px;
-  background-color: #003049;
 }
 .hidden {
   opacity: 0;
