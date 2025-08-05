@@ -7,13 +7,6 @@ export default function SingleMovie() {
   const { id } = useParams();
   const [movie, setMovie] = useState({ reviews: [] });
 
-  const NewReviws = (newReview) => {
-    setMovie((prevMovie) => ({
-      ...prevMovie,
-      reviews: [...prevMovie.reviews, newReview],
-    }));
-  };
-
   const urlReview = `http://localhost:3004/movies/movie/${id}`;
 
   function gnrData() {
@@ -109,7 +102,7 @@ export default function SingleMovie() {
             </div>
           </div>
         </div>
-        <FormNewRev></FormNewRev>
+        <FormNewRev gnrData={gnrData}></FormNewRev>
       </main>
     </>
   );

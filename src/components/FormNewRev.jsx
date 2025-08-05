@@ -26,9 +26,11 @@ export default function FormNewRev(prop) {
           console.log("commento inserito");
           console.log(data);
 
+          prop.gnrData(); // funzione per renderizzare le recensioni del singolo film
           setFormData({ name: "", vote: 1, text: "" });
         });
     }
+    // renderizzare le nuove recensioni inserite nel singolo film
   }
   return (
     <div className="container p-3">
