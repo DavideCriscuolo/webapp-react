@@ -15,7 +15,13 @@ export default function defaultLayout() {
       </header>
 
       <Outlet></Outlet>
-      <footer></footer>
+      <footer>
+        <div className="container">
+          <p className="text-center text-white py-3">
+            Copyright &copy; 2025 CineFlix{" "}
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

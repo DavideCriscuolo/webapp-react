@@ -41,7 +41,7 @@ export default function SingleMovieCard({ props }) {
             <div></div>
           </div>
         </div>
-        <div className="col">
+        <div className="col p-2">
           <div className="my-5">
             {" "}
             <h3 className="card-text">Recensioni</h3>
@@ -53,7 +53,7 @@ export default function SingleMovieCard({ props }) {
                   <ul className="list-unstyled ">
                     <li key={review.id} className=" my-0  ">
                       {" "}
-                      {review.name}{" "}
+                      <span>{review.name} </span>{" "}
                       <StarRatings
                         rating={review.vote}
                         starRatedColor="gold"
