@@ -4,8 +4,10 @@ import "ldrs/react/Hatch.css";
 export default function Loader() {
   return (
     <>
-      <div className="d-flex justify-content-center w-100">
-        <Hatch size="65" stroke="4" speed="3.5" color="black" />
+      <div className="d-flex justify-content-center  align-items-center w-100 py-3 ">
+        <div>
+          <Hatch size="65" stroke="4" speed="2.5" color="black" />
+        </div>
       </div>
     </>
   );

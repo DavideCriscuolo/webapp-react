@@ -7,6 +7,7 @@ export default function MainHome() {
   const [dataMovies, setDataMovies] = useState([]);
   const { isLoading, setIsLoading } = useContext(LoaderContext);
   const url = "http://localhost:3004/movies";
+
   function gnrData() {
     setTimeout(() => {
       fetch(url)
@@ -19,6 +20,7 @@ export default function MainHome() {
     }, 1500);
   }
   useEffect(gnrData, []);
+
   return (
     <>
       <main>
