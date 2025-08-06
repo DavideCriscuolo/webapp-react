@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router";
 import CardC from "./CardC";
 import Loader from "./Loader";
+import { LoaderContext } from "../context/contextLoader";
 export default function MainHome() {
   const [dataMovies, setDataMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { isLoading, setIsLoading } = useContext(LoaderContext);
   const url = "http://localhost:3004/movies";
   function gnrData() {
     setTimeout(() => {
@@ -15,7 +16,7 @@ export default function MainHome() {
           console.log(data);
           setIsLoading(false);
         });
-    }, 2000);
+    }, 1500);
   }
   useEffect(gnrData, []);
   return (
@@ -24,9 +25,7 @@ export default function MainHome() {
         <div className="container py-5">
           <h2 className="text-center text-white py-3">TUTTI I FILM</h2>
           <div className=" py-2 row row-cols-1 row-cols-sm-1 row-cols-md-2  row-cols-lg-4  g-3">
-            {isLoading ? <Loader></Loader> : <CardC data={dataMovies}></CardC>}
-
-            <CardC data={dataMovies}></CardC>
+            {isLoading ? <Loader /> : <CardC data={dataMovies} />}
           </div>
         </div>
       </main>
