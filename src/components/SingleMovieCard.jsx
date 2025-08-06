@@ -1,4 +1,6 @@
 import StarRatings from "react-star-ratings";
+
+import FormNewRev from "../components/FormNewRev";
 export default function SingleMovieCard({ props }) {
   return (
     <div className="card border-0 mb-3">
@@ -68,6 +70,7 @@ export default function SingleMovieCard({ props }) {
           })}{" "}
         </div>
       </div>
+      <FormNewRev gnrData={props.gnrData}></FormNewRev>
     </div>
   );
 }

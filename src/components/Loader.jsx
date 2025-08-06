@@ -6,7 +6,7 @@ export default function Loader() {
     <>
       <div className="d-flex justify-content-center  align-items-center w-100 py-3 ">
         <div>
-          <Hatch size="65" stroke="4" speed="2.5" color="black" />
+          <Hatch size="65" stroke="4" speed="2.5" color="white" />
         </div>
       </div>
     </>

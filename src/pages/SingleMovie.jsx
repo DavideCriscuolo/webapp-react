@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import JumboC from "../components/JumboC";
 
-import FormNewRev from "../components/FormNewRev";
 import { LoaderContext } from "../context/contextLoader";
 import Loader from "../components/Loader";
 import SingleMovieCard from "../components/SingleMovieCard";
@@ -28,17 +27,18 @@ export default function SingleMovie() {
   return (
     <>
       <main>
-        <JumboC></JumboC>
         {isLoading ? (
           <Loader />
         ) : (
           <div className="container ">
             <div className="row p-5">
               <div className="col">
-                <SingleMovieCard props={movie}></SingleMovieCard>
+                <SingleMovieCard
+                  gnrData={gnrData}
+                  props={movie}
+                ></SingleMovieCard>
               </div>
             </div>
-            <FormNewRev gnrData={gnrData}></FormNewRev>
           </div>
         )}
       </main>

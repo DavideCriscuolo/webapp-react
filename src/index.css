@@ -4,12 +4,13 @@ header {
   }
 }
 nav {
-  background-color: #c1121f;
+  background-color: rgba(0, 0, 0, 0.221);
+
   h1 {
     font-family: "Montserrat", sans-serif;
     font-style: italic;
     font-weight: 800;
-    color: #003049;
+    color: #c1121f;
   }
 }
 
@@ -21,13 +22,14 @@ nav {
   }
 }
 .bg-img-jumbo {
-  background-image: url("./assets/sala-cinema.jpg");
+  background-image: url("./assets/netflix.jpeg");
   background-size: cover;
   background-position: 50% 45%;
 }
 
 main {
   min-height: 1200px;
+  background-color: black;
 }
 .hidden {
   opacity: 0;
@@ -41,5 +43,5 @@ main {
 
 footer {
   height: 100px;
-  background-color: #c1121f;
+  background-color: black;
 }

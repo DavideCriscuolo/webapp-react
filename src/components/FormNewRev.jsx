@@ -33,7 +33,7 @@ export default function FormNewRev(prop) {
     // renderizzare le nuove recensioni inserite nel singolo film
   }
   return (
-    <div className="container p-3">
+    <div className="container text-white p-3">
       <h4>Inserisci una nuova Recensione</h4>
       <form action="post" onSubmit={gnrComment}>
         <div className="mb-3">
